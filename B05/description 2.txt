@@ -1,0 +1,20 @@
+Github -https://github.com/manjunathgithub8/CN-assignment-1
+
+output file- etag.txt
+
+working:
+        * curl command is used to get the http request headers.
+        * curl -I is used for only displaying headers
+        * http://goidirectory.nic.in is used for input example
+   
+
+challenges faced: * we found that mostly apache servers use Etag.
+                  * initially couldn't capture https(secure) websites, 
+                     hence had to capture websites of http(not seccure)
+                  * different team members tried different sites like https://www.BBC.com 
+                     which was a http2 sites. we could verify by changing the etag value to get 200 code
+
+topics learnt: few curl commands, Etag and how browers use Etag for checking modification in webpage and load accordingly
+               how caching is done in browser.
+                 
+

@@ -1,0 +1,61 @@
+1) getting Etag
+
+$ curl -I http://goidirectory.nic.in                                              
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0   122    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+
+HTTP/1.1 200 OK
+
+Date: Sat, 21 Sep 2019 03:17:58 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Last-Modified: Fri, 07 Jul 2017 12:15:37 GMT
+ETag: "7a-553b930d6ec40"
+Accept-Ranges: bytes
+Content-Length: 122
+Content-Type: text/html
+
+
+-------------------------------------------------------------------------------------------------------------
+
+2) using If-None-Match With same Etag.
+   status code:304
+   the browser requests the server with the command, for if any changes.
+   we observe that the same webpage is loaded Present in browser cache,Since their is no modification.
+
+
+$ curl -I --header 'If-None-Match: "7a-553b930d6ec40"' http://goidirectory.nic.in
+
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+
+HTTP/1.1 304 Not Modified
+
+Date: Sat, 21 Sep 2019 03:18:04 GMT
+Server: Apache
+ETag: "7a-553b930d6ec40"
+
+------------------------------------------------------------------------------------------------------------------
+
+3) using If-None-Match with Different Etag.
+   here the browser thinks the Website has some modification and is Loaded Again like it is accesing first time.
+
+
+$ curl -I --header 'If-None-Match: "aaa553b930d6ec40aaa"' http://goidirectory.nic.in
+
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0   122    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+
+HTTP/1.1 200 OK
+
+Date: Sat, 21 Sep 2019 03:18:08 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Last-Modified: Fri, 07 Jul 2017 12:15:37 GMT
+ETag: "7a-553b930d6ec40"
+Accept-Ranges: bytes
+Content-Length: 122
+Content-Type: text/html
