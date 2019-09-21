@@ -1,0 +1,53 @@
+1)IP-Address
+
+$ nslookup www.christpucollege.com
+Non-authoritative answer:
+Server:  dns.google                     //frame Number-2
+Address:  8.8.8.8
+
+Name:    ghs.googlehosted.com            //frame Number -8
+Addresses:  2404:6800:4009:80c::2013
+          172.217.166.51                  //IP
+Aliases:  www.christpucollege.com
+
+-------------------------------------------------------------------------------------------
+2) NS Record
+
+
+$ nslookup -query=ns www.christpucollege.com    //frame Number - 16
+Non-authoritative answer:
+Server:  dns.google
+Address:  8.8.8.8
+
+www.christpucollege.com canonical name = ghs.googlehosted.com
+
+googlehosted.com
+        primary name server = ns1.google.com               //host domain name
+        responsible mail addr = dns-admin.google.com        //mail domain of host
+        serial  = 270231024
+        refresh = 900 (15 mins)
+        retry   = 900 (15 mins)
+        expire  = 1800 (30 mins)
+        default TTL = 60 (1 min)              // min time to live
+
+-----------------------------------------------------------------------------------------------------------------------
+3) MX Record   // frame 20
+
+
+$ nslookup -query=mx www.christpucollege.com
+Non-authoritative answer:
+Server:  dns.google                              
+Address:  8.8.8.8                                
+
+www.christpucollege.com canonical name = ghs.googlehosted.com
+
+googlehosted.com
+        primary name server = ns1.google.com                //mail server
+        responsible mail addr = dns-admin.google.com
+        serial  = 270231024
+        refresh = 900 (15 mins)
+        retry   = 900 (15 mins)
+        expire  = 1800 (30 mins)
+        default TTL = 60 (1 min)
+
+ttl- 1591(wireshark)
