@@ -1,0 +1,16 @@
+Github link: https://github.com/manjunathgithub8/CN-assignment-1
+
+output : Dns request.txt
+
+capture File: dns reqest capture file.pcapng
+
+Working: nsloopup commands are used to resolve ip address, mx record, ns record of a host
+         
+         ns- name servers
+         mx- mail domain
+         time to live are recorded using wireshark
+
+Learning : * finding ip addr of a given domain
+            * finding mail domain
+            * DNS caching (TTL)
+
