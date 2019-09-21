@@ -1,0 +1,19 @@
++OK Gpop ready for requests from 203.192.204.65 d19mb23430793jam
++OK send PASS
++OK Welcome.
+stat : +OK 3 58224
+total number of mails : 3
+
+retrieving email message 1 : +OK message follows
+
+retrieving email message 3 : +OK message follows
+
+Emails are saved to text files
+
+Deleted 1: +OK marked for deletion
+Deleted 3 : +OK marked for deletion
+
+Signing off using quit command
++OK Farewell.
+
+pop3 server closed

@@ -1,0 +1,20 @@
+
+INPUT :
+  format: 
+          javac A09. java
+          java A09 <host name> <port> <email_id> <password>
+
+   example:
+           javac A09.java
+           java A09 pop.gmail.com 995 example@gmail.com example123
+
+working: The program uses basic pop3 commands like user,pass,retr,dele to perform mail
+
+Challenges faced: secure spcket connection was not established.
+                  Learned how to socket input/output.
+
+Contribution: usn 1ks17cs040-checked about sslsocketfactory and inmplemented for a pop3 connection.
+              usn 1ks17cs039 and 1ks17cs028 - operation of basic pop commands.
+                
+references:
+           syntax of sslsocketfactory - https://www.baeldung.com/java-ssl
