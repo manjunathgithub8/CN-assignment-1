@@ -8,7 +8,7 @@ Manjunath A   - 1KS17CS040
 Madhusudhan G - 1KS17CS039
 Hanumesh VT   - 1KS17CS028
 
-Assignments: A01, B05, B15
+Assignments: A09, B05, B15
 
 
 
