@@ -2,6 +2,8 @@ Github -https://github.com/manjunathgithub8/CN-assignment-1
 
 output file- etag.txt
 
+capture file : wireshark capture Etag.pcapng
+
 working:
         * curl command is used to get the http request headers.
         * curl -I is used for only displaying headers
